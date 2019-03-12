@@ -26,7 +26,13 @@ public class ConnectionSteps {
     @Then("user sees element link1")
     public void user_sees_element_link1() {
         Framework.getWebDriver().findElement(By.id("link1"));
-    }    
+    }  
+    
+    @Then("user sees element link3")
+    public void user_sees_element_link3() {
+        Framework.getWebDriver().findElement(By.id("link3"));
+    } 
+    
 
     @Then("user takes a screenshot")
     public void user_takes_a_screenshot() {
