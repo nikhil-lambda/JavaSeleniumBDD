@@ -13,9 +13,9 @@ public class ConnectionSteps {
         Framework.init();
     }
 
-    @When("navigates to http://34.221.37.187:3000/")
+    @When("navigates to 34.221.37.187:3000")
     public void user_navigates_to_google_com() {
-        Framework.getWebDriver().navigate().to("http://34.221.37.187:3000/");
+        Framework.getWebDriver().navigate().to("34.221.37.187:3000");
     }
 
     @Then("user sees element image1")
@@ -28,7 +28,7 @@ public class ConnectionSteps {
         Framework.takeScreenShot("pwa", "page1");
     }
     
-    @Given("user loads browser")
+  /*  @Given("user loads browser")
     public void user_loads_browser() {
         Framework.init();
     }
@@ -66,5 +66,5 @@ public class ConnectionSteps {
     @Then("user takes a screenshot")
     public void user_takes_a_screenshot() {
         Framework.takeScreenShot("pwa", "page3");
-    }
+    }*/
 }
