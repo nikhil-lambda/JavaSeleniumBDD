@@ -15,16 +15,46 @@ public class ConnectionSteps {
 
     @When("user navigates to google.com")
     public void user_navigates_to_google_com() {
-        Framework.getWebDriver().navigate().to("https://www.google.co.in");
+        Framework.getWebDriver().navigate().to("http://34.221.37.187:3000/");
     }
 
-    @Then("user sees element hplogo")
+    @Then("user sees element app logo")
     public void user_sees_element_hplogo() {
-        Framework.getWebDriver().findElement(By.id("hplogo"));
+        Framework.getWebDriver().findElement(By.id("image1"));
     }
 
     @Then("user takes a screenshot")
     public void user_takes_a_screenshot() {
-        Framework.takeScreenShot("Google", "page");
+        Framework.takeScreenShot("pwa", "page1");
+    }
+    
+     @When("user navigates to google.com")
+    public void user_navigates_to_google_com() {
+        Framework.getWebDriver().navigate().to("http://34.221.37.187:3000/");
+    }
+
+    @Then("user sees element app logo")
+    public void user_sees_element_hplogo() {
+        Framework.getWebDriver().findElement(By.id("link1"));
+    }
+
+    @Then("user takes a screenshot")
+    public void user_takes_a_screenshot() {
+        Framework.takeScreenShot("pwa", "page2");
+    }
+    
+     @When("user navigates to google.com")
+    public void user_navigates_to_google_com() {
+        Framework.getWebDriver().navigate().to("http://34.221.37.187:3000/");
+    }
+
+    @Then("user sees element app logo")
+    public void user_sees_element_hplogo() {
+        Framework.getWebDriver().findElement(By.id("link2"));
+    }
+
+    @Then("user takes a screenshot")
+    public void user_takes_a_screenshot() {
+        Framework.takeScreenShot("pwa", "page2");
     }
 }
