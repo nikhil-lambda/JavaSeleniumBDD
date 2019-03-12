@@ -33,11 +33,9 @@ public class ConnectionSteps {
         Framework.getWebDriver().findElement(By.id("link3"));
     } 
     
-
     @Then("user takes a screenshot")
     public void user_takes_a_screenshot() {
         Framework.takeScreenShot("pwa", "page1");
-    }
-    
+    }    
     
 }
