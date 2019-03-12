@@ -139,6 +139,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
+          <forkMode>none</forkMode>
           <properties>
             <property>
               <name>listener</name>
