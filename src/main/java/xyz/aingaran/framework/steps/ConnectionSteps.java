@@ -18,12 +18,12 @@ public class ConnectionSteps {
         Framework.getWebDriver().navigate().to("http:\\/\\/34.221.37.187:3000\\/");
     }
 
-    @Then("user sees element image1")
+    @Then("sees element image1")
     public void user_sees_element_hplogo() {
         Framework.getWebDriver().findElement(By.id("image1"));
     }
 
-    @Then("user takes a screenshot")
+    @Then("takes a screenshot")
     public void user_takes_a_screenshot() {
         Framework.takeScreenShot("pwa", "page1");
     }
