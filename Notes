@@ -1,0 +1,13 @@
+sudo docker run --name custom-jenkins-container-4 --privileged -d -p 8080:8080 custom-jenkins
+sudo docker run --name custom-jenkins-container-1 -d -p 8080:8080 -v /var/run/docker.sock/:/var/run/docker.sock custom-jenkins-1
+
+install google chrome
+
+
+curl http://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.10.0/allure-commandline-2.10.0.tgz -o allure.tgz
+tar -xvzf allure.tgz
+[centos@ip-10-0-1-36 ~]$ mv allure-2.10.0 /opt/allure
+root@e89f221330f6:/app# cd /opt/allure/bin
+ export PATH= $PATH:/opt/allure/bin
+ cd /var/jenkins_home/workspace/selenium-pipeline
+allure serve allure-results
