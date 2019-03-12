@@ -13,9 +13,9 @@ public class ConnectionSteps {
         Framework.init();
     }
 
-    @When("navigates to 34.221.37.187:3000")
+    @When("navigates to http:\\/\\/34.221.37.187:3000\\/")
     public void user_navigates_to_google_com() {
-        Framework.getWebDriver().navigate().to("34.221.37.187:3000");
+        Framework.getWebDriver().navigate().to("http:\\/\\/34.221.37.187:3000\\/");
     }
 
     @Then("user sees element image1")
