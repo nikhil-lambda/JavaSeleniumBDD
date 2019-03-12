@@ -28,6 +28,26 @@ public class ConnectionSteps {
         Framework.takeScreenShot("pwa", "page1");
     }
     
+    @Given("user loads browser")
+    public void user_loads_browser1() {
+        Framework.init();
+    }
+
+    @When("user navigates to http:\\/\\/34.221.37.187:3000\\/")
+    public void user_navigates_to_pwa() {
+        Framework.getWebDriver().navigate().to("http:\\/\\/34.221.37.187:3000\\/");
+    }
+
+    @Then("user sees element link1")
+    public void user_sees_element_pwalink() {
+        Framework.getWebDriver().findElement(By.id("link1"));
+    }
+
+    @Then("user takes a screenshot")
+    public void user_takes_a_screenshot1() {
+        Framework.takeScreenShot("pwa1", "page2");
+    }
+    
   /*  @Given("user loads browser")
     public void user_loads_browser() {
         Framework.init();
