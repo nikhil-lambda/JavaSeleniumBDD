@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh "chmod +x src/main/resources/drivers/chromedriverlinux"
         sh "rm -rf allure-results/ |:"
-        sh "mvn test"
+        sh "mvn test -Dmaven.test.failure.ignore=true"
       }
     }     
      stage('Run Allure') {
