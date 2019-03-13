@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import xyz.aingaran.framework.core.Framework;
+import org.testng.Assert;
 
 public class ConnectionSteps {
 
