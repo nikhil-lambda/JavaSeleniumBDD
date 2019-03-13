@@ -11,7 +11,7 @@ pipeline {
         sh "mvn clean"
       }
     }
-    stage('Build') {
+    stage('Test') {
       steps {
         sh "chmod +x src/main/resources/drivers/chromedriverlinux"
         sh "rm -rf allure-results/ |:"
