@@ -5,12 +5,15 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 
 /**
  * Core class that manages Driver.
@@ -27,20 +30,32 @@ public class Framework {
         // This class should not be used as an instance.
     }
 
-    public static void init()  {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.setHeadless(true);
-        chromeOptions.addArguments("--window-size=1366x768");
-        chromeOptions.setExperimentalOption("useAutomationExtension", false);
-        webDriver = new ChromeDriver(chromeOptions);
+    public static void init() throws Exception {
+
+        DesiredCapabilities capability = new DesiredCapabilities();
+        capability.setCapability("platform", "WIN10");
+        capability.setCapability("browserName", "firefox");
+        capability.setCapability("version", "47.0");
+        capability.setCapability("network", true);
+        capability.setCapability("exception", true);
+        capability.setCapability("visual", true);
+        capability.setCapability("console", true);
+        capability.setCapability("video", true);
+        capability.setCapability("idleTimeout", 40);
+
+
+        webDriver = new RemoteWebDriver(new URL("http://{username}:{token}@hub.lambdatest.com/wd/hub"), capability);
         webDriver.manage().window().maximize();
     }
 
     public static WebDriver getWebDriver()  {
         if (null == webDriver)  {
-            init();
+            try{
+                init();
+                return webDriver;
+            }catch (Exception ex){
+                logger.error("Driver not initilzed", ex);
+            }
             return webDriver;
         } else  {
             return webDriver;

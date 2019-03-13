@@ -10,11 +10,16 @@ public class ConnectionSteps {
 
     @Given("user loads browser")
     public void user_loads_browser() {
-        Framework.init();
+        try{
+            Framework.init();
+        }catch (Exception ex){
+            System.out.println("Unable to inilize driver"+ ex);
+        }
     }
 
     @When("user navigates to google.com")
     public void user_navigates_to_google_com() {
+        System.out.println("naviaget"+Framework.getWebDriver());
         Framework.getWebDriver().navigate().to("https://www.google.co.in");
     }
 
