@@ -43,10 +43,10 @@ public class ConnectionSteps {
         Framework.init();
     }
 
-    @When("user navigates to http:\\/\\/34.220.2.144:3000\\/ to check link1")
+ /*   @When("user navigates to http:\\/\\/34.220.2.144:3000\\/ to check link1")
     public void user_navigates_to_google_com_1() {
         Framework.getWebDriver().navigate().to("http:\\/\\/34.220.2.144:3000\\/");
-    }
+    }*/
     
     @Then("user sees element link1")
     public void user_sees_element_link1() {
