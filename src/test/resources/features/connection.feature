@@ -1,8 +1,8 @@
 Feature: Connect to web Feature
   Verify if user is able to open chrome and navigate to a web page
 
-Scenario: open google.com
+Scenario: open http://34.220.2.144:3000/
     Given user loads browser
-    When user navigates to google.com
-    Then user sees element hplogo
+    When user navigates to http://34.220.2.144:3000/
+    Then user sees element image1
     Then user takes a screenshot
