@@ -6,6 +6,11 @@ pipeline {
     jdk 'JDK'
   }
   stages {
+    stage('Clean'){
+      steps{
+        sh "mvn clean"
+      }
+    }
     stage('Build') {
       steps {
         sh "chmod +x src/main/resources/drivers/chromedriverlinux"
