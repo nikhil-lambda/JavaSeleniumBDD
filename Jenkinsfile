@@ -13,5 +13,10 @@ pipeline {
         sh "nohup /opt/allure/bin/allure serve allure-results --port 3030 &"
       }
     }     
+     stage('Run Allure') {
+      steps {
+        sh "nohup /opt/allure/bin/allure serve allure-results --port 3030 &"
+      }
+    } 
   }
 }
