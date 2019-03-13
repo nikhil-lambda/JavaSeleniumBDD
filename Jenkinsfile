@@ -18,9 +18,14 @@ pipeline {
         sh "mvn test -Dmaven.test.failure.ignore=true"
       }
     }     
-     stage('Run Allure') {
+    stage('Run Allure') {
       steps {
         sh "nohup /opt/allure/bin/allure serve allure-results --port 3030 &"
+      }
+    } 
+    stage('Run JMeter') {
+      steps {
+        sh "sh bin/jmeter -n -t HTTPRequest.jmx -l bin/HTTPRequest.jtl"
       }
     } 
   }
