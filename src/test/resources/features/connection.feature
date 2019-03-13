@@ -13,8 +13,8 @@ Scenario: open http://34.220.2.144:3000/ to check link1
     Then user sees element link1
     Then user takes a screenshot of link1
 
-Scenario: open http://34.220.2.144:3000/ to check link3
-    Given loads browser to check link3
+Scenario: open http://34.220.2.144:3000/ to check link2
+    Given loads browser to check link2
     When user navigates to http://34.220.2.144:3000/ 
-    Then user sees element link3
-    Then user takes a screenshot of link3
+    Then user sees element link2
+    Then user takes a screenshot of link2
