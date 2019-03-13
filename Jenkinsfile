@@ -25,8 +25,8 @@ pipeline {
     } 
     stage('Run JMeter') {
       steps {
-        sh "/app/apache-jmeter-5.1/bin/jmeter -Jjmeter.save.saveservice.output_format=xml -n -t HTTPRequest.jmx -l /app/apache-jmeter-5.1/HTTPRequest.jtl"
-        step([$class: 'ArtifactArchiver', artifacts: 'HTTPRequest.xml'])
+        sh "/app/apache-jmeter-5.1/bin/jmeter -n -t HTTPRequest.jmx -l /app/apache-jmeter-5.1/HTTPRequest.jtl"
+        step([$class: 'ArtifactArchiver', artifacts: 'HTTPRequest.jtl'])
       }
     } 
   }
