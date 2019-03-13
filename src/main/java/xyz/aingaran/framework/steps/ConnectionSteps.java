@@ -52,7 +52,7 @@ public class ConnectionSteps {
     public void user_sees_element_link3() {
         try{
             Framework.getWebDriver().findElement(By.id("link3"));
-        }catch(Execption e){
+        }catch(Exception e){
             
         }
     } 
