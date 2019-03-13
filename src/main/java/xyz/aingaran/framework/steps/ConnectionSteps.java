@@ -8,7 +8,7 @@ import xyz.aingaran.framework.core.Framework;
 
 public class ConnectionSteps {
 
-    @Given("user loads browser")
+    @Given("loads browser to check image")
     public void user_loads_browser() {
         Framework.init();
     }
@@ -38,4 +38,23 @@ public class ConnectionSteps {
         Framework.takeScreenShot("pwa", "page1");
     }   
     
+    @Given("loads browser to check link1")
+    public void user_loads_browser() {
+        Framework.init();
+    }
+
+    @When("user navigates to http:\\/\\/34.220.2.144:3000\\/")
+    public void user_navigates_to_google_com() {
+        Framework.getWebDriver().navigate().to("http:\\/\\/34.220.2.144:3000\\/");
+    }
+    
+    @Then("user sees element link1")
+    public void user_sees_element_link1() {
+        Framework.getWebDriver().findElement(By.id("link1"));
+    } 
+    
+    @Then("user takes a screenshot")
+    public void user_takes_a_screenshot() {
+        Framework.takeScreenShot("pwa", "page2");
+    } 
 }
