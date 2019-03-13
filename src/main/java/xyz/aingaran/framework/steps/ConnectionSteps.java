@@ -43,17 +43,17 @@ public class ConnectionSteps {
         Framework.takeScreenShot("pwa", "page2");
     } 
     
-    @Given("loads browser to check link3")
+    @Given("loads browser to check link2")
     public void user_loads_browser_to_check_link3() {
         Framework.init();
     }
 
-    @Then("user sees element link3")
+    @Then("user sees element link2")
     public void user_sees_element_link3() {
         Framework.getWebDriver().findElement(By.id("link3"));
     } 
     
-    @Then("user takes a screenshot of link3")
+    @Then("user takes a screenshot of link2")
     public void user_takes_a_screenshot_3() {
         Framework.takeScreenShot("pwa", "page3");
     } 
