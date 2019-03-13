@@ -13,7 +13,7 @@ public class ConnectionSteps {
         Framework.init();
     }
 
-    @When("user navigates to http:\\/\\/34.220.2.144:3000\\/")
+  /*  @When("user navigates to http:\\/\\/34.220.2.144:3000\\/")
     public void user_navigates_to_google_com() {
         Framework.getWebDriver().navigate().to("http:\\/\\/34.220.2.144:3000\\/");
     }
@@ -36,6 +36,20 @@ public class ConnectionSteps {
     @Then("user takes a screenshot")
     public void user_takes_a_screenshot() {
         Framework.takeScreenShot("pwa", "page1");
-    }    
+    }    */
+    @When("user navigates to google.com")
+    public void user_navigates_to_google_com() {
+        Framework.getWebDriver().navigate().to("https://www.google.co.in");
+    }
+
+    @Then("user sees element hplogo")
+    public void user_sees_element_hplogo() {
+        Framework.getWebDriver().findElement(By.id("hplogo"));
+    }
+
+    @Then("user takes a screenshot")
+    public void user_takes_a_screenshot() {
+        Framework.takeScreenShot("Google", "page");
+    }
     
 }
