@@ -6,5 +6,5 @@ Feature: Connect to web Feature
     When user navigates to http://34.220.2.144:3000/
     Then user sees element image1
     Then user sees element link1
-    Then user sees element link2
+    Then user sees element link3
     Then user takes a screenshot
