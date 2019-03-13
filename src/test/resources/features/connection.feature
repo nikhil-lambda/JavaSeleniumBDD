@@ -7,7 +7,7 @@ Scenario: open http://34.220.2.144:3000/
     Then user sees element image1
     Then user takes a screenshot
 
-Scenario: open http://34.220.2.144:3000/
+Scenario: open http://34.220.2.144:3000/ to check link1
     Given user loads browser to check link1
     When user navigates to http://34.220.2.144:3000/ 
     Then user sees element link1
