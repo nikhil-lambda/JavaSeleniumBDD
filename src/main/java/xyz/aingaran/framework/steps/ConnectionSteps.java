@@ -39,7 +39,7 @@ public class ConnectionSteps {
     }   
     
     @Given("loads browser to check link1")
-    public void void user_loads_browser_to_check_link() {
+    public void user_loads_browser_to_check_link() {
         Framework.init();
     }
 
