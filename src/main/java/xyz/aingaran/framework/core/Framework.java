@@ -34,8 +34,8 @@ public class Framework {
 
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setCapability("platform", "WIN10");
-        capability.setCapability("browserName", "firefox");
-        capability.setCapability("version", "47.0");
+        capability.setCapability("browserName", "chrome");
+        capability.setCapability("version", "71.0");
         capability.setCapability("network", true);
         capability.setCapability("exception", true);
         capability.setCapability("visual", true);
