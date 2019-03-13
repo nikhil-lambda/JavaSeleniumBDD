@@ -55,7 +55,7 @@ public class ConnectionSteps {
         try{
             Framework.getWebDriver().findElement(By.id("link3"));
         }catch(Exception e){
-            Assert.assertFalse(true);
+            Assert.assertFalse(false);
         } 
     } 
     
