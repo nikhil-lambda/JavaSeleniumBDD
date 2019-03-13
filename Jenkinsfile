@@ -25,7 +25,7 @@ pipeline {
     } 
     stage('Run JMeter') {
       steps {
-        sh "sh bin/jmeter -n -t HTTPRequest.jmx -l bin/HTTPRequest.jtl"
+        sh "bin/jmeter -n -t HTTPRequest.jmx -l bin/HTTPRequest.jtl"
       }
     } 
   }
