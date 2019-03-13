@@ -9,7 +9,7 @@ import xyz.aingaran.framework.core.Framework;
 public class ConnectionSteps {
 
     @Given("loads browser to check image")
-    public void user_loads_browser() {
+    public void user_loads_browser_to_check_image() {
         Framework.init();
     }
 
@@ -39,7 +39,7 @@ public class ConnectionSteps {
     }   
     
     @Given("loads browser to check link1")
-    public void user_loads_browser_1() {
+    public void void user_loads_browser_to_check_link() {
         Framework.init();
     }
 
