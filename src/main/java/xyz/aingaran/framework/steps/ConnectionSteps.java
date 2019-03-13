@@ -52,9 +52,9 @@ public class ConnectionSteps {
     public void user_sees_element_link3() {
         try{
             Framework.getWebDriver().findElement(By.id("link3"));
-        }/*catch(Exception e){
+        }catch(Exception e){
             
-        }*/ 
+        } 
     } 
     
     @Then("user takes a screenshot of link2")
