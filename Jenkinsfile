@@ -14,6 +14,7 @@ pipeline {
     stage('Build') {
       steps {
         sh "chmod +x src/main/resources/drivers/chromedriverlinux"
+        sh "rm -rf allure-results/ |:"
         sh "mvn test"
       }
     }     
