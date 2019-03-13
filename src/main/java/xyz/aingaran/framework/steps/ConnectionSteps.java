@@ -39,12 +39,12 @@ public class ConnectionSteps {
     }   
     
     @Given("loads browser to check link1")
-    public void user_loads_browser() {
+    public void user_loads_browser_1() {
         Framework.init();
     }
 
     @When("user navigates to http:\\/\\/34.220.2.144:3000\\/")
-    public void user_navigates_to_google_com() {
+    public void user_navigates_to_google_com_1() {
         Framework.getWebDriver().navigate().to("http:\\/\\/34.220.2.144:3000\\/");
     }
     
@@ -54,7 +54,7 @@ public class ConnectionSteps {
     } 
     
     @Then("user takes a screenshot")
-    public void user_takes_a_screenshot() {
+    public void user_takes_a_screenshot_1() {
         Framework.takeScreenShot("pwa", "page2");
     } 
 }
